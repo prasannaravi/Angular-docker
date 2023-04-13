@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('INSTALL PACKAGES') {
       steps {
-        sh "npm install"
+        bat "npm install"
       }
     }
     stage('TEST') {
@@ -18,7 +18,7 @@ pipeline {
     }
     stage('BUILD APP') {
       steps {
-        sh "node_modules/.bin/ng build --prod"
+        bat "node_modules/.bin/ng build --prod"
       }
     }
     stage("BUILD DOCKER") {
